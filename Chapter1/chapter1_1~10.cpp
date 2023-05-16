@@ -84,4 +84,23 @@ int main() {
         if(a[7]=='1' || a[7]=='3') std::cout<<" M";
         else std::cout<<" W";
      */
+    /*
+     * 6번 문제 : 숫자만 추출
+     * ex) g0en2Ts8ESoft -> 28 6
+        char a[50];
+        int res=0, cnt=0, i;
+        std::cin>>a;
+        for(i=0; a[i]!='\0'; i++) {
+            if(a[i] >= 48 && a[i] <= 57) {
+                res = res*10+(a[i]-48);
+            }
+        }
+        std::cout<<res<<"\n";
+        for(i=1; i<=res; i++) {
+            if(res%i == 0) {
+                cnt++;
+            }
+        }
+        std::cout<<cnt;
+     */
 }
