@@ -103,4 +103,23 @@ int main() {
         }
         std::cout<<cnt;
      */
+    /*
+     * 7번 문제 : 영어단어 복구
+     * ex) bE   au T I fu   L -> beautiful
+        char a[100];
+        int i, p = 0;
+        char res[100];
+        gets(a);
+        for(i = 0; a[i]!='\0'; i++) {
+            if(a[i] != ' ') {
+                if(a[i] >= 'A' && a[i] <= 'Z') {
+                    res[p++]=a[i] + 32;
+                } else {
+                    res[p++]=a[i];
+                }
+            }
+        }
+        res[p]='\0';
+        std::cout<<res;
+     */
 }
