@@ -1,5 +1,8 @@
 #include <iostream>
 #include <stdio.h>
+
+int digit_sum(int i);
+
 int main() {
     /*
      * 인프런 C++ CodingTest 강의
@@ -177,5 +180,30 @@ int main() {
         for(i = 1; i<=n; i++) {
             std::cout<<cnt[i]<<' ';
         }
+     */
+    /*
+     * 10번 문제 : 자릿수의 합
+     * ex)
+     * 5
+     * 125 15232 79 1325 97
+     * -> 97
+        int n;
+        std::cin>>n;
+        int b;
+        int i, res, max=-2147000000;
+        int sum;
+
+        for(i = 0; i<n; i++) {
+            std::cin>>b;
+            sum = digit_sum(b);
+            if(sum > max) {
+                max = sum;
+                res = b;
+            }
+            else if(sum==max) {
+                if(b>res) res=b;
+            }
+        }
+        std::cout<<res;
      */
 }
