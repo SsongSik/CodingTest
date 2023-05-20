@@ -146,4 +146,36 @@ int main() {
             std::cout<<"NO";
         }
      */
+    /*
+     * 9번 문제 : 모두의 약수
+     * ex) 8 -> 1 2 2 3 2 4 2 4
+     *
+        int a;
+        std::cin>>a;
+        int i, j, cnt;
+
+        for(i = 1; i<=a ; i++) {
+            cnt = 0;
+            for(j = 1; j <= i; j++) {
+                if(i%j == 0) {
+                    cnt++;
+                }
+            }
+            std::cout<<cnt<<' ';
+        }
+        //n제곱의 시간복잡도를 소요하게 됨 -> 다른 방법이 필요
+        int cnt[50001];
+        int n, i, j;
+        std::cin>>n;
+
+        for(i = 1; i<=n; i++) {
+            for(j = i; j<=n; j=j+i) {
+                cnt[j]++;
+            }
+        }
+
+        for(i = 1; i<=n; i++) {
+            std::cout<<cnt[i]<<' ';
+        }
+     */
 }
