@@ -122,4 +122,28 @@ int main() {
         res[p]='\0';
         std::cout<<res;
      */
+    /*
+     * 8번 문제 : 올바른 괄호
+     * ex) (()(())))(() -> NO
+     * (()) )( 이것도 cnt가 0이 되더라도 올바른 괄호가 아님
+        char a[30];
+        int i, cnt = 0;
+        std::cin>>a;
+
+        for(i = 0; a[i]!='\0'; i++) {
+            if(a[i]=='(') {
+                cnt++;
+            } else if(a[i] == ')') {
+                cnt--;
+            }
+            if(cnt<0){
+                break;
+            }
+        }
+        if(cnt==0) {
+            std::cout<<"YES";
+        } else {
+            std::cout<<"NO";
+        }
+     */
 }
