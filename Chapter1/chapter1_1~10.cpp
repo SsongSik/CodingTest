@@ -205,5 +205,14 @@ int main() {
             }
         }
         std::cout<<res;
+
+        int digit_sum(int x) {
+            int tmp, sum = 0;
+            while(x>0) {
+                tmp = x%10;
+                sum+=tmp;
+                x=x/10;
+            }
+        }
      */
 }
