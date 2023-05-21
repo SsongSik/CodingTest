@@ -1,5 +1,9 @@
 #include <iostream>
 #include <stdio.h>
+
+int reverse(int x);
+bool isPrime(int x);
+
 int main() {
     /*
      * 11번 문제 : 숫자의 총 개수(small)
@@ -55,25 +59,45 @@ int main() {
         }
         std::cout<<res;
      */
-    int ch[10] = {0} ;
-    int i, digit, max=-2147000000, res;
-    char a[101];
-
-    std::cin>>a;
-    for(i=0; a[i]!='\0'; i++) {
-        digit = a[i]-48;
-        ch[digit]++;
-    }
-
-    for(i=0; i<10; i++) {
-        if(ch[i]>max) {
-            res = i;
-            max = ch[i];
-        } else if(ch[i] == max) {
-            if(i > res) {
-                res = i;
+    /*
+     * 14번 문제 : 뒤집은 소수
+     * ex) 5
+     * 32 55 62 3700 250
+     * -> 23 73
+        int n, num, i, tmp;
+        std::cin>>n;
+        for(i = 1; i<=n; i++) {
+            std::cin>>num;
+            tmp = reverse(num);
+            if(isPrime(tmp)) {
+                std::cout<<tmp<<' ';
             }
         }
-    }
-    std::cout<<res;
+
+        int reverse(int x) {
+            int res=0;
+            int tmp;
+            while(x>0) {
+                tmp = x%10; //2
+                res=res*10+tmp;
+                x=x/10;
+            }
+            return res;
+        }
+
+        bool isPrime(int x) {
+            int i;
+            if(x==1) {
+                return false;
+            }
+            bool flag = true;
+            for(i = 2; i<x; i++) {
+                if(x%i==0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+     */
 }
