@@ -1,6 +1,5 @@
 #include <iostream>
 #include <stdio.h>
-
 int main() {
     /*
      * 11번 문제 : 숫자의 총 개수(small)
@@ -29,6 +28,31 @@ int main() {
             c++; // 2, 3
         }
         res=res+((n-sum)*c);
+        std::cout<<res;
+     */
+    /*
+     * 13번 문제 : 가장 많이 사용된 자릿수
+     * ex) 1445524 -> 4
+        int ch[10] = {0} ;
+        int i, digit, max=-2147000000, res;
+        char a[101];
+
+        std::cin>>a;
+        for(i=0; a[i]!='\0'; i++) {
+            digit = a[i]-48;
+            ch[digit]++;
+        }
+
+        for(i=0; i<10; i++) {
+            if(ch[i]>max) {
+                res = i;
+                max = ch[i];
+            } else if(ch[i] == max) {
+                if(i > res) {
+                    res = i;
+                }
+            }
+        }
         std::cout<<res;
      */
 }
