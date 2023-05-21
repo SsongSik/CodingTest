@@ -55,4 +55,25 @@ int main() {
         }
         std::cout<<res;
      */
+    int ch[10] = {0} ;
+    int i, digit, max=-2147000000, res;
+    char a[101];
+
+    std::cin>>a;
+    for(i=0; a[i]!='\0'; i++) {
+        digit = a[i]-48;
+        ch[digit]++;
+    }
+
+    for(i=0; i<10; i++) {
+        if(ch[i]>max) {
+            res = i;
+            max = ch[i];
+        } else if(ch[i] == max) {
+            if(i > res) {
+                res = i;
+            }
+        }
+    }
+    std::cout<<res;
 }
