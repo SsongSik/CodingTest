@@ -123,4 +123,96 @@ int main() {
         }
         std::cout<<cnt;
      */
+    /*
+     * 16번 문제 : Anagram 문제(구글 인터뷰 문제)
+     * ex)
+     * AbaAeCe
+     * baeeACA -> YES
+        char a[101];
+        char b[101];
+        int resA[32] = {0};
+        int resa[32] = {0};
+        int resB[32] = {0};
+        int resb[32] = {0};
+        int i;
+        bool res = true;
+
+        std::cin>>a;
+        std::cin>>b;
+
+        for(i=0; a[i]!='\0'; i++) {
+            if(a[i] >= 65 && a[i] <= 90) {
+                resA[a[i]-65]++;
+            }
+            if(a[i] >= 97 && a[i] <= 122) {
+                resa[a[i]-97]++;
+            }
+        }
+
+        for(i=0; b[i]!='\0'; i++) {
+            if(b[i] >= 65 && b[i] <= 90) {
+                resB[b[i]-65]++;
+            }
+            if(b[i] >= 97 && b[i] <= 122) {
+                resb[b[i]-97]++;
+            }
+        }
+
+        for(i=0; i<=31; i++) {
+            if(resA[i] != resB[i]) {
+                res = false;
+            }
+            if(resa[i] != resb[i]) {
+                res = false;
+            }
+        }
+
+        if(res) {
+            std::cout<<"YES";
+        } else {
+            std::cout<<"NO";
+        }
+
+        -----------------------------------
+        더 효율적인 방법(입력 하나로)
+        char a[101];
+        int resA[52] = {0};
+        int resB[52] = {0};
+        int i;
+        bool res = true;
+
+        std::cin>>a;
+
+        for(i=0; a[i]!='\0'; i++) {
+            if(a[i] >= 65 && a[i] <= 90) {
+                resA[a[i]-65]++;
+            }
+            if(a[i] >= 97 && a[i] <= 122) {
+                resA[a[i]-71]++;
+            }
+        }
+
+        std::cin>>a;
+
+        for(i=0; a[i]!='\0'; i++) {
+            if(a[i] >= 65 && a[i] <= 90) {
+                resB[a[i]-65]++;
+            }
+            if(a[i] >= 97 && a[i] <= 122) {
+                resB[a[i]-71]++;
+            }
+        }
+
+        for(i=0; i<=51; i++) {
+            if(resA[i]!=resB[i]) {
+                res = false;
+            }
+        }
+
+        if(res) {
+            std::cout<<"YES";
+        } else {
+            std::cout<<"NO";
+        }
+     */
 }
