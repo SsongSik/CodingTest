@@ -100,4 +100,27 @@ int main() {
             return flag;
         }
      */
+    /*
+     * 15번 문제 : 소수의 개수(제한 시간 1초)
+     * 20 -> 8
+        int n, i, j;
+        int cnt = 0;
+        std::cin>>n;
+
+        for(i = 2; i <= n; i++) {
+            bool isPrime = true;
+
+            for(j = 2; j*j<=i; j++) {
+                if(i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if(isPrime) {
+                cnt++;
+            }
+        }
+        std::cout<<cnt;
+     */
 }
