@@ -215,4 +215,30 @@ int main() {
             std::cout<<"NO";
         }
      */
+    /*
+     * 17번 문제 : 선생님 퀴즈
+     * ex)
+     * 3
+     * 10 55
+     * 20 350
+     * 100 5050
+        int n, i;
+        int a, result;
+
+        int j, sum;
+
+        std::cin>>n;
+        for(i = 0; i < n; i++) {
+            sum = 0;
+            std::cin>>a>>result;
+            for(j = 1; j <= a; j++) {
+                sum += j;
+            }
+            if(sum == result) {
+                std::cout<<"YES\n";
+            } else {
+                std::cout<<"NO\n";
+            }
+        }
+     */
 }
