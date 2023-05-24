@@ -241,4 +241,30 @@ int main() {
             }
         }
      */
+    /*
+     * 18번 문제 : 층간소음
+     * ex) 10 90
+     * 23 17 120 34 112 12 123 235 25 113
+        int n, m;
+        std::cin>>n>>m;
+        int i, cnt = 0;
+        int res;
+        int tmp = -2147000000;
+
+        for(i = 0; i < n; i++) {
+            std::cin>>res;
+            if(res > m) {
+                cnt++;
+                if(cnt > tmp) {
+                    tmp = cnt;
+                }
+            } else {
+                cnt = 0;
+            }
+        }
+        if(cnt==0) {
+            tmp = -1;
+        }
+        std::cout<<tmp;
+     */
 }
