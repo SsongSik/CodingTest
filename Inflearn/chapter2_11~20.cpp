@@ -275,7 +275,7 @@ int main() {
         std::cin>>n;
 
         int cnt = 0;
-        int a[n] = {0};
+        int a[100] = {0};
         for(i = 0; i < n; i++) {
             std::cin>>a[i];
         }
