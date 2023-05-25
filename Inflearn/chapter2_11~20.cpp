@@ -221,7 +221,7 @@ int main() {
      * 3
      * 10 55
      * 20 350
-     * 100 5050
+     * 100 5050 -> YES NO YES
         int n, i;
         int a, result;
 
@@ -244,7 +244,7 @@ int main() {
     /*
      * 18번 문제 : 층간소음
      * ex) 10 90
-     * 23 17 120 34 112 12 123 235 25 113
+     * 23 17 120 34 112 12 123 235 25 113 -> 3
         int n, m;
         std::cin>>n>>m;
         int i, cnt = 0;
@@ -270,7 +270,7 @@ int main() {
     /*
      * 19번 문제 : 분노유발자
      * ex) 10
-     * 56 46 55 76 65 53 52 53 55 50
+     * 56 46 55 76 65 53 52 53 55 50 -> 3
         int n, i, j;
         std::cin>>n;
 
@@ -307,5 +307,72 @@ int main() {
             }
         }
         std::cout<<cnt;
+     */
+    /*
+     * 20번 문제 : 가위 바위 보
+     * ex) 5
+     * 2 3 3 1 3
+     * 1 1 2 2 3
+     * A B A B D
+        int n, i;
+        int a[100] = {0}, b[100] = {0};
+        std::cin>>n;
+
+        for(i = 0; i < n; i++) {
+            std::cin>>a[i];
+        }
+
+        for(i = 0; i < n; i++) {
+            std::cin>>b[i];
+        }
+
+        for(i = 0; i < n; i++) {
+            if(a[i] == 1) {
+                if(b[i] == 1) {
+                    std::cout<<"D\n";
+                }else if(b[i] == 2) {
+                    std::cout<<"B\n";
+                } else {
+                    std::cout<<"A\n";
+                }
+            } else if(a[i] == 2){
+                if(b[i] == 1) {
+                    std::cout<<"A\n";
+                }else if(b[i] == 2) {
+                    std::cout<<"D\n";
+                } else {
+                    std::cout<<"B\n";
+                }
+            } else {
+                if(b[i] == 1) {
+                    std::cout<<"B\n";
+                }else if(b[i] == 2) {
+                    std::cout<<"A\n";
+                } else {
+                    std::cout<<"D\n";
+                }
+            }
+        }
+
+        다른 방법 : 비기는 경우, A가 이기는 경우만 생각하고 나머지는 B
+        int n, i;
+        int a[100] = {0}, b[100] = {0};
+        std::cin>>n;
+
+        for(i = 0; i < n; i++) {
+            std::cin>>a[i];
+        }
+
+        for(i = 0; i < n; i++) {
+            std::cin>>b[i];
+        }
+
+        for(i=0; i<n; i++) {
+            if(a[i] == b[i]) std::cout<<"D\n";
+            else if(a[i]==1 && b[i]==3) std::cout<<"A\n";
+            else if(a[i]==2 && b[i]==1) std::cout<<"A\n";
+            else if(a[i]==3 && b[i]==2) std::cout<<"A\n";
+            else std::cout<<"B\n";
+        }
      */
 }
