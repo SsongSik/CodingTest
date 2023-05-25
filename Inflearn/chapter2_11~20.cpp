@@ -267,4 +267,45 @@ int main() {
         }
         std::cout<<tmp;
      */
+    /*
+     * 19번 문제 : 분노유발자
+     * ex) 10
+     * 56 46 55 76 65 53 52 53 55 50
+        int n, i, j;
+        std::cin>>n;
+
+        int cnt = 0;
+        int a[n] = {0};
+        for(i = 0; i < n; i++) {
+            std::cin>>a[i];
+        }
+
+        for(i = 0; i < n-1; i++) {
+            for(j = i+1; j < n; j++) {
+                if(a[i] <= a[j]) {
+                    break;
+                } else {
+                    if(j==n-1) {
+                        cnt++;
+                    }
+                }
+            }
+        }
+        std::cout<<cnt;
+
+        다른 답안 :
+        int n, i, cnt=0, h[101], max;
+        std::cin>>n;
+        for(i=1; i<=n; i++) {
+            std::cin>>h[i];
+        }
+        max = h[n];
+        for(i=n-1; i>=1; i--) {
+            if(h[i] > max) {
+                max = h[i];
+                cnt++;
+            }
+        }
+        std::cout<<cnt;
+     */
 }
