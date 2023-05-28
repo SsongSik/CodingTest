@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 int main() {
     /*
@@ -52,5 +53,49 @@ int main() {
                 std::cout<<"B";
             }
         }
+     */
+    /*
+     * 22번 문제 : 온도의 최대값(제한시간 1초)
+     * ex) 10 2
+     * 3 -2 -4 -9 0 3 7 13 8 -3
+        int n, m, i, j;
+        std::cin>>n>>m;
+        int a[100000] = {0};
+
+        int sum, max = -2147000000;
+
+        for(i=0; i<n; i++) {
+            std::cin>>a[i];
+        }
+
+        for(i=0; i<=n-m; i++) {
+            sum = 0;
+            for(j=i; j<i+m; j++) {
+                sum += a[j];
+                if(sum > max) {
+                    max = sum;
+                }
+            }
+        }
+        std::cout<<max;
+        -> 시간 초과 발생, 다른 답안 필요
+        int n, k, i, sum=0, max;
+        std::cin>>n>>k;
+        std::vector<int> a(n);
+
+        for(i=0; i<n; i++) {
+            std::cin>>a[i];
+        }
+        for(i=0; i<k; i++) {
+            sum+=a[i];
+        }
+        max=sum; //0, 1의 합
+        for(i=k; i<n; i++) {
+            sum=sum+(a[i] - a[i-k]);
+            if(sum>max) {
+                max = sum;
+            }
+        }
+        std::cout<<max;
      */
 }
