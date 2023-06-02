@@ -98,4 +98,50 @@ int main() {
         }
         std::cout<<max;
      */
+    /*
+     * 23번 문제 : 연속 부분 증가수열
+     * ex) 9
+     * 5 7 3 3 12 12 13 10 11
+     * -> 5
+     * 10
+     * 1 2 3 0 0 9 10 11 1 2
+     *  int n, i, cnt=1;
+        std::cin>>n;
+        int max = 0;
+
+        std::vector<int> a(n);
+
+        for(i=0; i<n; i++) {
+            std::cin>>a[i];
+            if(i>=1) {
+                if(a[i] >= a[i-1]) {
+                    cnt++;
+                    if(max<cnt) {
+                        max = cnt;
+                    }
+                }
+                else {
+                    cnt = 1;
+                }
+            }
+        }
+        std::cout<<max;
+        다른 답안)
+        int n, i, pre, now, cnt=1, max=1;
+        std::cin>>n;
+        std::cin>>pre;
+        for(i=1; i<n; i++) {
+            std::cin>>now;
+            if(now>=pre) {
+                cnt++;
+                if(cnt>max) {
+                    max = cnt;
+                }
+            } else {
+                cnt=1;
+            }
+            pre=now;
+        }
+        std::cout<<max;
+     */
 }
