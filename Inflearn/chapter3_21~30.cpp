@@ -1,5 +1,8 @@
 #include <iostream>
 #include <vector>
+#include <cstdlib>
+#include <algorithm>
+#include <string>
 
 int main() {
     /*
@@ -143,5 +146,62 @@ int main() {
             pre=now;
         }
         std::cout<<max;
+     */
+    /*
+     * 24번 문제 : Jolly Jumpers
+     * ex) 5
+     * 1 4 2 3 7
+     * -> YES
+     *  int n, i;
+        bool res = false;
+        std::cin>>n;
+
+        std::vector<int> a(n);
+        int pre=0, now=0;
+        std::cin>>pre;
+
+        for(i=1; i<n; i++) {
+            std::cin>>now;
+            if(now-pre < n) {
+                a[std::abs(now-pre)]++;
+            }
+            pre = now;
+        }
+
+        for(i=1; i<n; i++) {
+            if(a[i]!=0){
+                res = true;
+            } else {
+                res = false;
+                break;
+            }
+        }
+
+        if(res) {
+            std::cout<<"YES";
+        } else {
+            std::cout<<"NO";
+        }
+        다른풀이) ->
+        어차피 값이 n이상이거나, 이미 배열에 값이 존재하면
+        그건 Jolly Jump가 아님
+
+        int n, i, now, pre, pos;
+        std::cin>>n;
+        std::vector<int> ch(n);
+        std::cin>>pre;
+
+        for(i=1; i<n; i++) {
+            std::cin>>now;
+            pos=abs(pre-now);
+            if(pos>0 && pos<n && ch[pos]==0) {
+                ch[pos] = 1;
+            } else {
+                std::cout<<"NO";
+                return 0;
+            }
+            pre=now;
+        }
+        std::cout<<"YES";
      */
 }
