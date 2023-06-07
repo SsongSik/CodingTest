@@ -204,4 +204,32 @@ int main() {
         }
         std::cout<<"YES";
      */
+    /*
+     * 25번 문제 : 석차구하기
+     * ex) 5
+     * 90 85 92 95 90
+     * -> 3 5 2 1 3
+     *  int n;
+        int i, j;
+        std::cin>>n;
+        std::vector<int> a(n);
+        std::vector<int> b(n);
+
+        for(i=0; i<n; i++) {
+            std::cin>>a[i];
+            b[i]=1;
+        }
+
+        for(i=0; i<n; i++) {
+            for(j=0; j<n; j++) {
+                if(a[i] < a[j]) {
+                    b[i]++;
+                }
+            }
+        }
+
+        for(i=0; i<n; i++) {
+            std::cout<<b[i]<<' ';
+        }
+     */
 }
