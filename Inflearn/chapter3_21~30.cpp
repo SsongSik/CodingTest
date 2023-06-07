@@ -232,4 +232,32 @@ int main() {
             std::cout<<b[i]<<' ';
         }
      */
+    /*
+     * 26번 문제 : 마라톤
+     * ex) 8
+     * 2 8 10 7 1 9 4 15
+     * -> 1 1 1 3 5 2 5 1
+     *  int n, i, j;
+        std::cin>>n;
+
+        std::vector<int> a(n);
+        std::vector<int> b(n);
+
+        for(i=0; i<n; i++) {
+            std::cin>>a[i];
+            b[i] = 1;
+        }
+
+        for(i=n-1; i>=0; i--) {
+            for(j=i-1; j>=0; j--) {
+                if(a[i] <= a[j]) {
+                    b[i]++;
+                }
+            }
+        }
+
+        for(i=0; i<n; i++) {
+            std::cout<<b[i]<<' ';
+        }
+     */
 }
