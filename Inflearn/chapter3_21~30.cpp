@@ -288,4 +288,34 @@ int main() {
             }
         }
      */
+    /*
+     * 28번 문제 : N!에서 0의 개수
+     * ex) 12 -> 2
+     *  int n, i;
+        std::cin>>n;
+        std::vector<int> a(n+1);
+        int tmp;
+        int res;
+
+        for(i=2; i<=n; i++) {
+            tmp = i;
+            res = 2;
+            while(true) {
+                if(tmp%res==0) {
+                    tmp = tmp/res;
+                    a[res]++;
+                } else {
+                    res++;
+                }
+                if(tmp == 1) {
+                    break;
+                }
+            }
+        }
+        if(a[2] > a[5]) {
+            std::cout<<a[5];
+        } else {
+            std::cout<<a[2];
+        }
+     */
 }
