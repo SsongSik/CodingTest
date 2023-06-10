@@ -260,4 +260,32 @@ int main() {
             std::cout<<b[i]<<' ';
         }
      */
+    /*
+     * 27번 문제 : N!의 표현법
+     * ex) 5
+     * -> 5! = 3 1 1
+     *  int i, j, n, tmp;
+        std::cin>>n;
+
+        std::vector<int> ch(n+1);
+        for(i=2; i<=n; i++) {
+            tmp=i;
+            j=2;
+            while(true) {
+                if(tmp%j==0) {
+                    tmp=tmp/j;
+                    ch[j]++;
+                } else {
+                    j++;
+                }
+                if(tmp==1) break;
+            }
+        }
+        std::cout<<n<<"!= ";
+        for(i=2; i<=n; i++) {
+            if(ch[i]!=0) {
+                std::cout<<ch[i]<<' ';
+            }
+        }
+     */
 }
