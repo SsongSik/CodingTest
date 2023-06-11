@@ -318,4 +318,26 @@ int main() {
             std::cout<<a[2];
         }
      */
+    /*
+     * 29번 문제 : 3의 개수는?
+     * ex) 15
+     * -> 2
+     *  int n, i;
+        std::cin>>n;
+        int tmp;
+        int res;
+
+        std::vector<int> a(10);
+
+        for(i=1; i<=n; i++) {
+            tmp = i;
+            while(tmp > 0) {
+                res = tmp%10;
+                a[res]++;
+                tmp = tmp/10;
+            }
+        }
+
+        std::cout<<a[3];
+     */
 }
