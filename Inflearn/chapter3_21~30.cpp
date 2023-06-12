@@ -340,4 +340,27 @@ int main() {
 
         std::cout<<a[3];
      */
+    /*
+     * 30번 문제 : 3의 개수는?(제한시간 1초)
+     *  int lt = 1, cur, rt, k=1;
+        int n;
+        int res=0;
+
+        std::cin>>n;
+
+        while(lt!=0) {
+            lt = n/(k*10);
+            cur = (n/k)%10;
+            rt = n%k;
+            if(cur>3) {
+                res = res + ((lt+1) * k);
+            } else if(cur==3) {
+                res = res + (lt * k) + rt+1;
+            } else {
+                res = res + (lt * k);
+            }
+            k=k*10;
+        }
+        std::cout<<res;
+     */
 }
