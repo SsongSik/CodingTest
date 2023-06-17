@@ -95,4 +95,31 @@ int main() {
             std::cout<<a[i]<<' ';
         }
      */
+    /*
+     * 35번 Special Sort(구글인터뷰) 버블정렬 응용
+     * ex) 8
+     * 1 2 3 -3 -2 5 6 -6
+     * -> -3 -2 -6 1 2 3 5 6
+     *  int n, i, j, tmp;
+        std::cin>>n;
+        std::vector<int> a(n);
+
+        for(i=0; i<n; i++) {
+            std::cin>>a[i];
+        }
+
+        for(i=0; i<n-1; i++) {
+            for(j=0; j<n-i-1; j++) {
+                if(a[j]>0 && a[j+1]<0) {
+                    tmp=a[j];
+                    a[j]=a[j+1];
+                    a[j+1]=tmp;
+                }
+            }
+        }
+
+        for(i=0; i<n; i++) {
+            std::cout<<a[i]<<' ';
+        }
+     */
 }
