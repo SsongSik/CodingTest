@@ -122,4 +122,33 @@ int main() {
             std::cout<<a[i]<<' ';
         }
      */
+    /*
+     * 36번 삽입정렬
+     * ex) 6
+     * 11 7 5 6 10 9
+     * -> 5 6 7 9 10 11
+     *  int n, i, j, tmp;
+        std::cin>>n;
+        std::vector<int> a(n);
+
+        for(i=0; i<n; i++) {
+            std::cin>>a[i];
+        }
+
+        for(i=1; i<n; i++) {
+            tmp=a[i]; //7
+            for(j=i-1; j>=0; j--) {
+                if(a[j]>tmp) { //11>7
+                    a[j+1]=a[j]; // 11 11
+                } else {
+                  break;
+                }
+            }
+            a[j+1]=tmp;
+        }
+
+        for(i=0; i<n; i++) {
+            std::cout<<a[i]<<' ';
+        }
+     */
 }
