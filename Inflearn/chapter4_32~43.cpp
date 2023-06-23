@@ -151,4 +151,39 @@ int main() {
             std::cout<<a[i]<<' ';
         }
      */
+    /*
+     * 37번 Least Recently Used(카카오 캐시 문제 변형) - 삽입정렬 코드 스타일
+     * ex) 5, 9
+     * 1 2 3 2 6 2 3 5 7
+     * -> 7 5 3 2 6
+     *  int size, n, i, j, num, pos;
+        std::cin>>size>>n;
+        std::vector<int> a(size);
+
+        for(i=0; i<n; i++) {
+            pos = -1;
+            std::cin>>num;
+            for(j=0; j<size; j++) {
+                if(num==a[j]) {
+                    pos = j;
+                }
+            }
+            if(pos==-1) {
+                //miss
+                for(j=size-1; j>=1; j--) {
+                    a[j]=a[j-1];
+                }
+            } else {
+                //hit
+                for(j=pos; j>=1; j--) {
+                    a[j]=a[j-1];
+                }
+            }
+            a[0]=num;
+        }
+
+        for(i=0; i<size; i++) {
+            std::cout<<a[i]<<' ';
+        }
+     */
 }
