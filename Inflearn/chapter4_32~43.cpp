@@ -186,4 +186,28 @@ int main() {
             std::cout<<a[i]<<' ';
         }
      */
+    /*
+     * 38번 Inversion Sequence
+     * ex) 8
+     * 5 3 4 0 2 1 1 0
+     * -> 4 8 6 2 5 1 3 7
+     *  int n, i, j, pos;
+        std::cin>>n;
+        std::vector<int> is(n+1), os(n+1);
+        for(i=1; i<=n; i++){
+            std::cin>>is[i];
+        }
+        for(i=n; i>=1; i--){
+            pos=i;
+            for(j=1; j<=is[i]; j++){
+                os[pos]=os[pos+1];
+                pos++;
+            }
+            os[pos]=i;
+        }
+        for(i=1; i<=n; i++){
+            std::cout<<os[i]<<' ';
+        }
+        return 0;
+     */
 }
