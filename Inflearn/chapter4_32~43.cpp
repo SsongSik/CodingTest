@@ -210,4 +210,32 @@ int main() {
         }
         return 0;
      */
+    /*
+     * 39번 두 배열 합치기
+     *  int n, m, i, p1=1, p2=1, p3=1;
+        std::cin>>n;
+        int a[101] = {0};
+        int b[101] = {0};
+        int c[300] = {0};
+        for(i=1; i<=n; i++){
+            std::cin>>a[i];
+        }
+        std::cin>>m;
+        for(i=1; i<=m; i++){
+            std::cin>>b[i];
+        }
+        while(p1<=n && p2<=m){
+            if(a[p1]<b[p2]){
+                c[p3++]=a[p1++];
+            }
+            else{
+                c[p3++]=b[p2++];
+            }
+        }
+        while(p1<=n) c[p3++]=a[p1++];
+        while(p2<=m) c[p3++]=b[p2++];
+        for(i=1; i<p3; i++){
+            std::cout<<c[i]<<' ';
+        }
+     */
 }
